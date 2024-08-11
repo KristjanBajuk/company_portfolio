@@ -1468,7 +1468,9 @@ strong {
     font-weight: 600;
 }
 .motivation-sec .motivation-content img {
-    max-width: 488px;
+    max-width: 100%;
+    width: 488px;
+
     display: block;
     position: absolute;
     bottom: -90px;
