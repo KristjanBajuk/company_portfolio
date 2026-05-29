@@ -1,10 +1,45 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { PORTFOLIO } from "@/lib/data";
 
 const pattern = ["tall", "", "", "wide", "", "", "", "tall", "", "", "wide", ""];
 
+function Lightbox({ src, onClose }: { src: string; onClose: () => void }) {
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", onKey);
+    document.body.classList.add("no-scroll");
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.classList.remove("no-scroll");
+    };
+  }, [onClose]);
+
+  return createPortal(
+    <div className="lightbox-overlay" onClick={onClose}>
+      <button className="lightbox-close" onClick={onClose} aria-label="Close">✕</button>
+      <div className="lightbox-img-wrap" onClick={(e) => e.stopPropagation()}>
+        <Image
+          src={src}
+          alt="ETH Slovenia event photo"
+          fill
+          sizes="90vw"
+          style={{ objectFit: "contain" }}
+        />
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 export default function EthSlovenia() {
   const e = PORTFOLIO.ethSlovenia;
+  const [active, setActive] = useState<string | null>(null);
+  const handleClose = useCallback(() => setActive(null), []);
+
   return (
     <section className="section" id="ethsi">
       <div className="shell">
@@ -48,7 +83,13 @@ export default function EthSlovenia() {
           </div>
           <div className="ethsi-gallery">
             {e.galleryImgs.map((src, i) => (
-              <div className={`g ${pattern[i] || ""}`} key={src}>
+              <button
+                className={`g ${pattern[i] || ""}`}
+                key={src}
+                onClick={() => setActive(src)}
+                aria-label={`View photo ${i + 1}`}
+                style={{ cursor: "zoom-in" }}
+              >
                 <Image
                   src={src}
                   alt={`ETH Slovenia event photo ${i + 1}`}
@@ -56,11 +97,12 @@ export default function EthSlovenia() {
                   sizes="(max-width: 768px) 50vw, 33vw"
                   className="gallery-img"
                 />
-              </div>
+              </button>
             ))}
           </div>
         </div>
       </div>
+      {active && <Lightbox src={active} onClose={handleClose} />}
     </section>
   );
 }

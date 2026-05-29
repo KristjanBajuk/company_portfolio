@@ -47,8 +47,7 @@ export default function Hero() {
 
       <div className="hero-foot">
         <p className="lede">
-          Four years deep in Ethereum. Smart contracts through to production frontends. Tokenized real estate, lending protocols, NFT platforms, and a local
-          community I helped build along the way.
+          Four years on Ethereum, end to end - from smart contract to frontend. I&#39;ve shipped tokenized real estate, lending protocols, and NFT platforms. Along the way, I built a local community that's still going.
         </p>
         <div>
           <span className="mono eyebrow">

@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Featured from "@/components/Featured";
+import GitHubActivity from "@/components/GitHubActivity";
 import Experience from "@/components/Experience";
 import Motivation from "@/components/Motivation";
 import EthSlovenia from "@/components/EthSlovenia";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <main>
         <Featured />
+        <GitHubActivity />
         <Experience />
         <Motivation />
         <EthSlovenia />

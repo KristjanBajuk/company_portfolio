@@ -136,6 +136,14 @@ function ExperiencePanel({
               </div>
             </div>
           )}
+
+          {data.url && (
+            <div className="panel-section">
+              <a href={data.url} target="_blank" rel="noopener noreferrer" className="panel-link">
+                View on Steam →
+              </a>
+            </div>
+          )}
         </div>
       </aside>
     </>,

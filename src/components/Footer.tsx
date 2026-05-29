@@ -25,6 +25,7 @@ export default function Footer() {
               {s.label} ↗
             </a>
           ))}
+          <a href="/cv.pdf" download>CV ↓</a>
         </div>
         <div className="col">
           <h6>Address</h6>

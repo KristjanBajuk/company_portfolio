@@ -38,6 +38,7 @@ export interface Experience {
   summary: string;
   highlights: string[];
   stack: string[];
+  url?: string;
   details: ExperienceDetails;
 }
 
@@ -88,7 +89,7 @@ export const PORTFOLIO = {
     {
       id: "blocksquare", title: "Blocksquare", role: "Development", year: "2024", tag: "RWA", url: "", img: "/imgs/blocksquare.svg", imgBg: "#ffffff",
       details: {
-        overview: "Senior Fullstack Web3 Engineer responsible for smart contracts, indexing infrastructure, and the user-facing frontend across Blocksquare's tokenization platform.",
+        overview: "Senior Web3 Engineer responsible for smart contracts, indexing infrastructure, and the user-facing frontend across Blocksquare's tokenization platform.",
         responsibilities: [
           "Integrated account abstraction into the platform — smart wallets using Alchemy and Privy SDK. Owned the full process from development through meetings with Alchemy and Privy to shipping and testing.",
           "Developed Token Offering v2 smart contract — a ground-up rewrite adding extensibility, flexibility, upgradeability, and feature parity beyond v1. Owned development, testing, and the audit process with Hacken.",
@@ -118,7 +119,7 @@ export const PORTFOLIO = {
           "Analytics page gave users and the team visibility into historic protocol performance for the first time",
           "Yield-bearing limit orders introduced a novel DeFi primitive combining passive yield with automated exit strategies",
         ],
-        stack: ["Solidity", "Foundry", "Ponder", "Express.js", "React", "TypeScript"],
+        stack: ["Solidity", "Foundry", "Ponder", "Envio", "Express.js", "React", "TypeScript"],
       },
     },
     { id: "navh", title: "Consensys NAV Hackathon", role: "Mentor", year: "2023", tag: "Mentoring", url: "https://consensys.io/blog/navh-2023-finale-consensys-web3-innovation-collaboration", img: "/imgs/portfolio6.jpeg" },
@@ -186,13 +187,13 @@ export const PORTFOLIO = {
 
   experiences: [
     {
-      id: "blocksquare", company: "Blocksquare", role: "Senior Fullstack Web3 Engineer",
+      id: "blocksquare", company: "Blocksquare", role: "Senior Web3 Engineer",
       period: "2024 — Present", location: "Ljubljana · Remote",
       summary: "Blocksquare is an award-winning team developing the world’s leading blockchain-based real estate tokenization system.",
       highlights: ["Lead frontend for tokenization marketplace", "Smart-contract integration · Solidity + Viem", "Award-winning RWA infrastructure"],
       stack: ["Solidity", "Foundry", "React", "Vite", "Material UI", "Envio", "Alchemy", "Privy"],
       details: {
-        overview: "Senior Fullstack Web3 Engineer responsible for smart contracts, indexing infrastructure, and the user-facing frontend across Blocksquare's tokenization platform.",
+        overview: "Senior Web3 Engineer responsible for smart contracts, indexing infrastructure, and the user-facing frontend across Blocksquare's tokenization platform.",
         responsibilities: [
           "Integrated account abstraction into the platform — smart wallets using Alchemy and Privy SDK. Owned the full process from development through meetings with Alchemy and Privy to shipping and testing.",
           "Developed Token Offering v2 smart contract — a ground-up rewrite adding extensibility, flexibility, upgradeability, and feature parity beyond v1. Owned development, testing, and the audit process with Hacken.",
@@ -241,18 +242,22 @@ export const PORTFOLIO = {
       id: "ineor", company: "Ineor", role: "Frontend Developer",
       period: "2020 — 2022", location: "Ljubljana",
       summary: "Creating digital solutions for global leaders in online gaming, FinTech, risk management, and e-governance.",
-      highlights: ["Gaming & betting platforms for major EU clients", "FinTech & e-governance products", "Enterprise React at scale"],
+      highlights: ["Gaming & betting platform for major EU clients", "FinTech", "Enterprise React at scale"],
       stack: ["React", "Vite", "Material UI", "TypeScript"],
       details: {
         overview: "Creating digital solutions for global leaders in online gaming, FinTech, risk management, and e-governance. Responsible for frontend engineering across multiple projects in the gaming and betting space for major European clients.",
         responsibilities: [
+          "Led frontend development of an internal developer tooling product that automatically intercepted and recorded production API calls — capturing endpoints and their real responses — and spun up a local mock server mirroring production endpoints exactly, eliminating the need for manual mocking during development. Also managed a student developer on the project: scoping tasks, conducting code reviews, and guiding their technical growth.",
           "Built frontend applications for gaming and betting platforms serving major European clients — complex UIs with real-time data, user account management, and regulated flows.",
-          "Worked across FinTech and e-governance projects with strict accessibility, audit trail, and compliance requirements.",
+          "Built and maintained admin panels for high-traffic betting platforms, handling complex data flows",
           "Contributed to shared component libraries used across multiple client projects.",
+          "Working on an internal product called SN&P featuring deep bpmn-js integration — customizing diagram rendering, extending the modeler with custom elements, and wiring diagram state into the application workflow.",
         ],
         impact: [
-          "Delivered production frontend for multiple gaming platforms used by large European player bases",
-          "Gained deep experience in regulated, high-stakes product environments with demanding quality standards",
+          "Developer tooling product cut local setup friction significantly — devs could replicate production API behaviour without manual mocking or backend dependency",
+          "Delivered production frontends for multiple high-traffic betting platforms used by large European player bases",
+          "Shared component library reduced duplication across client projects and improved consistency at scale",
+          "Gained hands-on experience leading another developer — translating product requirements into scoped tasks and maintaining code quality through review",
         ],
       },
     },
@@ -260,12 +265,12 @@ export const PORTFOLIO = {
       id: "mikrocop", company: "Mikrocop", role: "Frontend Developer",
       period: "2018 — 2020", location: "Ljubljana",
       summary: "Helped build InDocEdge — a unified DMS + BPM + RMS platform for document and process management.",
-      highlights: ["InDocEdge platform from zero", "Complex document workflows", "Enterprise-grade compliance UI"],
-      stack: ["Angular", "TypeScript", "RxJS"],
+      highlights: ["InDocEdge platform", "Complex document workflows", "Enterprise-grade compliance UI"],
+      stack: ["React", "Javascript"],
       details: {
-        overview: "Mikrocop is one of Slovenia's biggest providers of digital archiving and document management. I joined the InDocEdge product team during its first major rebuild.",
-        responsibilities: ["Implementing complex document workflow UIs (drag-drop, multi-pane review)", "Working closely with backend engineers on real-time state syncing", "Building compliance-critical interfaces for government and bank clients"],
-        impact: ["Co-shipped the v1 release of InDocEdge to enterprise customers"],
+        overview: "Mikrocop is one of Slovenia's biggest providers of digital archiving and document management. I joined the InDocEdge product team working on a new features.",
+        responsibilities: ["Implementing complex document workflow UIs (drag-drop, multi-pane review)", "Working closely with backend engineers", "Building compliance-critical interfaces for government and bank clients"],
+        impact: ["Co-shipped the release of InDocEdge new features to enterprise customers"],
       },
     },
     {
@@ -273,21 +278,21 @@ export const PORTFOLIO = {
       period: "2017 — 2018", location: "Ljubljana",
       summary: "Website maintenance and development plus social-media management for a local optical brand.",
       highlights: ["Full-stack site ownership", "Social media operations", "First taste of client work"],
-      stack: ["WordPress", "PHP", "JavaScript"],
+      stack: ["WordPress", "JavaScript"],
       details: {
         overview: "A small but formative role — I was responsible for the company's entire web presence.",
-        responsibilities: ["Maintaining and extending the company website", "Running Facebook, Instagram and Twitter content", "Light photography and content production"],
+        responsibilities: ["Maintaining and extending the company website", "Running Facebook and Instagram content"],
       },
     },
     {
       id: "napovednik", company: "Napovednik", role: "Fullstack Developer",
       period: "2016 — 2017", location: "Ljubljana",
       summary: "Development and maintenance of an events platform and its companion mobile app.",
-      highlights: ["Fullstack JS across web + mobile", "Events platform at national scale", "API design + maintenance"],
-      stack: ["JavaScript", "Node", "React Native", "MongoDB"],
+      highlights: ["Fullstack JS across web + mobile", "Events platform at national scale", "maintenance"],
+      stack: ["JavaScript", "PHP", "Backbone.js", "MySQL", "Phonegap"],
       details: {
         overview: "Napovednik is one of Slovenia's most-used events platforms. I worked across the stack on both the public web and the mobile companion app.",
-        responsibilities: ["Feature work on the public web platform", "Maintenance and feature work on the React Native mobile app", "API design and database modelling"],
+        responsibilities: ["Feature work on the public web platform", "Maintenance and feature work on the Phonegap mobile app", "API design and database modelling"],
       },
     },
     {
@@ -296,6 +301,7 @@ export const PORTFOLIO = {
       summary: "Built a desktop adventure game — 'Issac the Adventurer' — for PC and Mac.",
       highlights: ["Shipped game on PC + Mac", "Gameplay + tools programming", "Where it all started"],
       stack: ["Unity 3D", "C#"],
+      url: "https://store.steampowered.com/app/341260/Isaac_the_Adventurer/",
       details: {
         overview: "My first developer role. We were a small team shipping an indie adventure title.",
         responsibilities: ["Gameplay scripting and tools work in Unity", "Cross-platform builds for Windows + Mac"],
@@ -339,13 +345,13 @@ export const PORTFOLIO = {
   expertise: [
     { n: "01", title: "Frontend Engineering", body: "Production-grade interfaces that make on-chain interactions feel inevitable." },
     { n: "02", title: "Smart Contract Development", body: "Solidity contracts designed for security, gas-efficiency and clean upgrade paths." },
-    { n: "03", title: "Consulting", body: "Pre-launch reviews, token design and engineering support for early-stage teams." },
+    { n: "03", title: "Consulting", body: "Project reviews, technical guidance, and engineering support for early-stage teams." },
   ] as ExpertiseItem[],
 
   confPhotos: [
     "/imgs/img1.jpg", "/imgs/img6.jpeg", "/imgs/img13.jpg", "/imgs/img3.jpeg",
     "/imgs/img9.jpeg", "/imgs/img16.JPG", "/imgs/img25.jpg", "/imgs/img2.jpeg", "/imgs/img7.jpeg",
-    "/imgs/img14.JPG", "/imgs/img27.jpg", "/imgs/img28i 2.jpg", "/imgs/img4.jpg", "/imgs/img26.jpg", "/imgs/img10.jpeg", "/imgs/img18.JPG",
+    "/imgs/img14.JPG", "/imgs/img27.jpg", "/imgs/img28.jpg", "/imgs/img4.jpg", "/imgs/img26.jpg", "/imgs/img10.jpeg", "/imgs/img18.JPG",
     "/imgs/conf-ethcc-paris-1.jpg", "/imgs/img8.jpeg", "/imgs/img5.jpeg",
     "/imgs/img19.PNG", "/imgs/img20.jpg", "/imgs/img21.jpg", "/imgs/img22.jpg", "/imgs/img23.jpg"
   ],

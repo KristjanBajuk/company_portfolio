@@ -71,30 +71,20 @@ export default function Motivation() {
               this, the blockchain industry stands as a powerful resistance,
               challenging the status quo and paving the way for a more just
               society. It&apos;s about reclaiming control from governing powers
-              and returning it to the people — where it rightfully belongs.
+              and returning it to the people, where it rightfully belongs.
             </p>
 
             <blockquote className="moti-pull">
               <span className="mark">&ldquo;</span>
               Reclaiming control from governing powers and returning it to the
-              people — <em>where it rightfully belongs.</em>
+              people, <em>where it rightfully belongs.</em>
             </blockquote>
 
             <p>
-              This vision drives my passion for blockchain technology. It fuels
-              my desire to learn, innovate, and contribute to this
-              transformative space. I am committed to pushing this industry
-              forward, breaking down barriers, and helping to build a future
-              where everyone has the power to shape their own destiny.
-            </p>
-
-            <p>
-              Every day, I am inspired by the potential of blockchain to
-              redefine how we interact with the world, and I am proud to be
-              part of a movement that is truly making a difference. Together,
-              we are not just witnessing change; we are making it happen. This
-              is what excites me about the blockchain industry and motivates me
-              to keep pushing the boundaries of what&apos;s possible.
+              This vision drives my passion for blockchain technology. A
+              commitment to pushing the industry forward, breaking down
+              barriers, and helping build a future where everyone has the power
+              to shape their own destiny.
             </p>
 
             <div className="moti-sign">
