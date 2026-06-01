@@ -32,7 +32,7 @@ export default function Nav() {
         <a href="#podcast">Podcast</a>
         <a href="#stack">Stack</a>
         <a href="#contact">Contact</a>
-        <a href="/cv.pdf" download>CV</a>
+        <a href="/Kristjan Bajuk - CV - 2026.pdf" download>CV</a>
       </div>
       <div className="nav-clock">LJU · {time}</div>
     </nav>
