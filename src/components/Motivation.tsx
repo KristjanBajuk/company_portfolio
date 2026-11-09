@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import SectionHead from "./SectionHead";
+import sunsetSummit from "../../public/imgs/sunset-summit.jpg";
+import cypherpunk from "../../public/imgs/cypherpunk.jpg";
 
 export default function Motivation() {
   const imagesRef = useRef<HTMLDivElement>(null);
@@ -32,7 +34,8 @@ export default function Motivation() {
           <div className="moti-images" ref={imagesRef}>
             <figure className="moti-image">
               <Image
-                src="/imgs/sunset-summit.jpg"
+                src={sunsetSummit}
+                placeholder="blur"
                 alt="Kristjan on a summit, MetaMask hoodie, sunrise."
                 fill
                 sizes="(max-width: 768px) 100vw, 480px"
@@ -45,7 +48,8 @@ export default function Motivation() {
             </figure>
             <figure className="moti-image">
               <Image
-                src="/imgs/cypherpunk.jpg"
+                src={cypherpunk}
+                placeholder="blur"
                 alt="Cypherpunk"
                 fill
                 sizes="(max-width: 768px) 100vw, 480px"

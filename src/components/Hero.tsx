@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PORTFOLIO } from "@/lib/data";
+import portraitMain from "../../public/imgs/portrait-main.jpg";
 
 export default function Hero() {
   const D = PORTFOLIO;
@@ -33,10 +34,14 @@ export default function Hero() {
         </h1>
         <figure className="hero-portrait">
           <Image
-            src="/imgs/portrait-main.jpg"
+            src={portraitMain}
             alt="Kristjan Bajuk"
             fill
-            priority
+            preload
+            placeholder="blur"
+            // Landscape photo cropped into a portrait box (object-fit: cover),
+            // so the rendered width is ~1.9x the box width.
+            sizes="(max-width: 800px) 520px, 800px"
             style={{ objectFit: "cover" }}
           />
           <figcaption>
