@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { PORTFOLIO } from "@/lib/data";
+import portraitBw from "../../public/imgs/portrait-bw.jpg";
 
 export default function CTA() {
   const D = PORTFOLIO;
@@ -8,7 +9,8 @@ export default function CTA() {
       <div className="cta-grid">
         <figure className="cta-portrait">
           <Image
-            src="/imgs/portrait-bw.jpg"
+            src={portraitBw}
+            placeholder="blur"
             alt="Kristjan Bajuk"
             fill
             sizes="(max-width: 768px) 100vw, 400px"
@@ -19,11 +21,13 @@ export default function CTA() {
         <div className="cta-text">
           <span className="mono eyebrow">Let&apos;s work together</span>
           <h2 style={{ marginTop: 24 }}>
-            Have a <em>protocol</em> to ship?
+            Building a <em>dApp</em>?
           </h2>
           <p className="cta-blurb">
-            Open to freelance engagements, contract roles and consulting in
-            web3. Based in Ljubljana — working with teams worldwide.
+            I build the whole thing: Next.js frontend, indexer and smart
+            contracts. Open to freelance engagements, contract roles and
+            consulting in web3. Based in Ljubljana, working with teams
+            worldwide.
           </p>
           <div className="cta-actions">
             <a className="btn gold" href={D.socials[3].url}>

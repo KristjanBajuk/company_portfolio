@@ -137,6 +137,26 @@ function ExperiencePanel({
             </div>
           )}
 
+          {data.recommendation && (
+            <div className="panel-section">
+              <div className="label">Recommendation</div>
+              <blockquote className="panel-quote">
+                <p>&ldquo;{data.recommendation.excerpt}&rdquo;</p>
+                <footer className="mono">
+                  {data.recommendation.author} · {data.recommendation.title}
+                </footer>
+              </blockquote>
+              <a
+                href={data.recommendation.letterUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="panel-link"
+              >
+                Read the full letter ↗
+              </a>
+            </div>
+          )}
+
           {data.url && (
             <div className="panel-section">
               <a href={data.url} target="_blank" rel="noopener noreferrer" className="panel-link">
@@ -148,6 +168,39 @@ function ExperiencePanel({
       </aside>
     </>,
     document.body
+  );
+}
+
+function RecommendationQuote({ exp }: { exp: ExperienceType }) {
+  const r = exp.recommendation!;
+  return (
+    <figure className="rec">
+      <div className="rec-label mono">
+        <span className="eyebrow">Recommendation</span>
+        <span className="rec-company">{exp.company}</span>
+      </div>
+      <div className="rec-body">
+        <blockquote className="rec-quote">
+          <p>&ldquo;{r.quote}&rdquo;</p>
+        </blockquote>
+        <figcaption className="rec-foot">
+          <div className="rec-author">
+            <span className="rec-name">{r.author}</span>
+            <span className="mono">
+              {r.title} · {r.date}
+            </span>
+          </div>
+          <a
+            href={r.letterUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="panel-link"
+          >
+            Read the full letter ↗
+          </a>
+        </figcaption>
+      </div>
+    </figure>
   );
 }
 
@@ -170,6 +223,11 @@ export default function Experience() {
             <ExperienceCard key={e.id} exp={e} onOpen={setActive} />
           ))}
         </div>
+        {D.experiences
+          .filter((e) => e.recommendation)
+          .map((e) => (
+            <RecommendationQuote key={e.id} exp={e} />
+          ))}
       </div>
       <ExperiencePanel exp={active} onClose={handleClose} />
     </section>

@@ -150,6 +150,21 @@ button.feat { width: 100%; text-align: left; padding: 0; margin: 0; font: inheri
 .exp-cta::after { content: "→"; transition: transform .2s; display: inline-block; }
 @media (max-width: 800px) { .exp-grid { grid-template-columns: 1fr; } }
 
+/* ---------- RECOMMENDATION ---------- */
+.rec { margin: 64px 0 0; display: grid; grid-template-columns: 200px 1fr; gap: 40px; }
+.rec-label { display: flex; flex-direction: column; gap: 10px; padding-top: 10px; }
+.rec-company { color: var(--gold); }
+.rec-body { border-left: 1px solid var(--gold); padding-left: clamp(20px, 3vw, 40px); display: flex; flex-direction: column; gap: 32px; }
+.rec-quote { margin: 0; }
+.rec-quote p { margin: 0; font-family: var(--font-serif), system-ui, sans-serif; font-size: clamp(21px, 2.3vw, 30px); line-height: 1.3; letter-spacing: -0.01em; color: var(--ink); max-width: 42ch; text-wrap: pretty; }
+.rec-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.rec-author { display: flex; flex-direction: column; gap: 6px; }
+.rec-name { font-size: 17px; color: var(--ink); }
+@media (max-width: 800px) { .rec { grid-template-columns: 1fr; gap: 20px; margin-top: 48px; } }
+.panel-quote { margin: 0 0 18px; padding-left: 16px; border-left: 1px solid var(--gold); }
+.panel-quote p { font-family: var(--font-serif), system-ui, sans-serif; font-size: 18px; line-height: 1.5; margin: 0 0 10px; }
+.panel-quote footer { color: var(--ink-mute); }
+
 /* PANEL */
 .panel-overlay { position: fixed; inset: 0; background: rgba(6,6,5,0.62); backdrop-filter: blur(6px); z-index: 200; opacity: 0; pointer-events: none; transition: opacity .35s ease; }
 .panel-overlay.open { opacity: 1; pointer-events: auto; }

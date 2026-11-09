@@ -29,6 +29,15 @@ export interface ExperienceDetails {
   impact?: string[];
 }
 
+export interface Recommendation {
+  quote: string;
+  excerpt: string;
+  author: string;
+  title: string;
+  date: string;
+  letterUrl: string;
+}
+
 export interface Experience {
   id: string;
   company: string;
@@ -38,6 +47,7 @@ export interface Experience {
   summary: string;
   highlights: string[];
   stack: string[];
+  recommendation?: Recommendation;
   url?: string;
   details: ExperienceDetails;
 }
@@ -188,10 +198,18 @@ export const PORTFOLIO = {
   experiences: [
     {
       id: "blocksquare", company: "Blocksquare", role: "Senior Web3 Engineer",
-      period: "2024 — Present", location: "Ljubljana · Remote",
+      period: "2024 — 2026", location: "Ljubljana · Remote",
       summary: "Blocksquare is an award-winning team developing the world’s leading blockchain-based real estate tokenization system.",
       highlights: ["Lead frontend for tokenization marketplace", "Smart-contract integration · Solidity + Viem", "Award-winning RWA infrastructure"],
       stack: ["Solidity", "Foundry", "React", "Vite", "Material UI", "Envio", "Alchemy", "Privy"],
+      recommendation: {
+        quote: "I am pleased to recommend Kristjan Bajuk, who was a member of Blocksquare's engineering team from October 2024 to November 2026. He joined to work on our web applications and blockchain data, and over two years grew into our smart contract engineer, the person we relied on for the on-chain side of Oceanpoint, our decentralised finance platform for tokenised real estate.",
+        excerpt: "Kristjan writes with security in mind. His contracts measure what actually arrived rather than trusting the expected amount, and revert the whole operation if a trade falls short.",
+        author: "Denis Petrovčič",
+        title: "CEO, Blocksquare",
+        date: "November 2026",
+        letterUrl: "/Kristjan Bajuk - Letter of recommendation.pdf",
+      },
       details: {
         overview: "Senior Web3 Engineer responsible for smart contracts, indexing infrastructure, and the user-facing frontend across Blocksquare's tokenization platform.",
         responsibilities: [
