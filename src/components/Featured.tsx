@@ -51,6 +51,7 @@ function FeaturedPanel({
           <div className="panel-meta">
             <span className="gold">{data.role}</span>
             <span>· {data.year}</span>
+            {data.status && <span className="status"><i />{data.status}</span>}
           </div>
 
           {det.overview && (
@@ -119,7 +120,7 @@ export default function Featured() {
       <div className="shell">
         <SectionHead
           label="§ 01 · Selected Work"
-          kicker="Featured / 2022–25"
+          kicker="Featured / 2022–26"
           title="Shipped products, live on-chain."
           blurb="Selected dApps, marketplaces and community work from the last few years across Ethereum, Hyperliquid, Polygon and L2s."
         />
@@ -139,11 +140,14 @@ export default function Featured() {
                   />
                 </div>
                 <span className="badge">{f.tag}</span>
-                {f.url && !f.details && <span className="arrow">↗</span>}
-                {f.details && <span className="arrow">→</span>}
+                {f.url && !f.details && <span className="arrow-icon">↗</span>}
+                {f.details && <span className="arrow-icon">→</span>}
                 <div className="meta">
                   <span className="t">{f.title}</span>
                   <span className="r mono">
+                    {f.status && (
+                      <span className="status"><i />{f.status}</span>
+                    )}
                     <span>{f.role}</span>
                     <span>{f.year}</span>
                   </span>

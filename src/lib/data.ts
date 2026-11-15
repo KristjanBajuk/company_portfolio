@@ -20,6 +20,7 @@ export interface FeaturedProject {
   url?: string;
   img: string;
   imgBg?: string;
+  status?: string;
   details?: FeaturedProjectDetails;
 }
 
@@ -96,6 +97,23 @@ export const PORTFOLIO = {
   ] as Social[],
 
   featured: [
+    {
+      id: "nioreview", title: "NioReview", role: "Co-founder", year: "2026", status: "In progress", tag: "AI · SaaS", url: "https://www.nioreview.com/en", img: "/imgs/nioreview-hero.jpg",
+      details: {
+        overview: "Co-founder, building NioReview from the ground up: an AI operations assistant for boutique hotels. It gathers a property's guest reviews from every channel it is listed on, works out what guests are actually saying, and turns recurring complaints into operational work for the team.\n\nManagers get one place to follow their reputation, reply to reviews, coordinate housekeeping and track maintenance, instead of juggling extranets, spreadsheets and group chats.",
+        responsibilities: [
+          "Review sync: fetching reviews from Booking.com, Google, TripAdvisor and Airbnb with a background sweep that picks up new reviews and catches up on each channel's older history.",
+          "LLM review extraction: every review is read into structured issues with severity, responsible department and per-aspect signals, which feed everything else in the product.",
+          "KPI scores for value for money, sleep quality, food, cleanliness and staff, plus a \"What is impacting your score\" view that ranks which aspects move the overall rating the most.",
+          "AI suggestions on an Action Board: recurring complaints become suggested tasks backed by guest evidence, with owners, target dates and recurrence detection when a fixed issue comes back.",
+          "AI review replies: drafts written in the hotel's own voice and reply style, for staff to edit and post.",
+          "Housekeeping module: a live room board for reception and housekeeping, cleaning time tracking, issue reporting with photos, history and reports, kept in sync with the hotel's PMS.",
+          "Telegram bot integration: housekeeping notices in the team's group chat and a Telegram Mini App where staff open a room, update its status and report problems from their phone.",
+          "Guest surveys, multi-property organizations with roles, and Stripe subscriptions with per-plan entitlements.",
+        ],
+        stack: ["Next.js (PPR, Cache Components)", "Supabase", "Vercel", "TypeScript", "OpenAI", "Stripe", "Telegram Bot API", "Tailwind CSS", "shadcn/ui"],
+      },
+    },
     {
       id: "blocksquare", title: "Blocksquare", role: "Development", year: "2024", tag: "RWA", url: "", img: "/imgs/blocksquare.svg", imgBg: "#ffffff",
       details: {
