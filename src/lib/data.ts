@@ -223,6 +223,46 @@ export const PORTFOLIO = {
 
   experiences: [
     {
+      id: "makoreactor", company: "Makoreactor", role: "Web3 Developer · Self-employed",
+      period: "2022 — Present", location: "Ljubljana",
+      summary: "Freelancing across different projects — helping teams ship features, build dApps, and move faster with hands-on Web3 engineering.",
+      highlights: ["DeFi protocol features end-to-end", "Smart-contract audits & development", "Helping teams ship faster"],
+      stack: ["React", "Vite", "Next.js", "Envio", "Solidity", "Foundry", "Alchemy"],
+      details: {
+        overview: "Running Makoreactor as my independent freelance practice — taking on focused engagements with crypto teams and helping them ship features end-to-end. Bringing experience across the full stack to move fast without handoffs.",
+        responsibilities: [
+          "HyperLend — shipped several protocol features including repay with collateral (ParaSwap), cross-chain bridge integration, analytics page with Ponder indexer, and yield-bearing limit orders with an Express.js keeper bot and Envio indexer.",
+          "WSG NFT Marketplace — built the full marketplace for Wall Street Games end-to-end: frontend, Solidity contracts, The Graph subgraph, and Orbis decentralised user profiles.",
+          "OTC Marketplace — built a peer-to-peer token swap marketplace from scratch: frontend, smart contracts, and The Graph indexing. Secured a grant from The Graph team in Istanbul.",
+          "MetaCourt DAO — performed a smart contract audit, reviewing contract logic, access controls, and potential vulnerabilities before deployment.",
+        ],
+        impact: [
+          "Broad experience across DeFi, NFT, and DAO projects enables fast onboarding and delivery on new engagements",
+          "End-to-end ownership across frontend, contracts, and indexing means teams avoid slow handoffs and ship faster",
+        ],
+      },
+    },
+    {
+      id: "nioreview", company: "NioReview", role: "Co-founder · Engineering",
+      period: "2026 — Present", location: "Ljubljana", url: "https://www.nioreview.com/en",
+      summary: "Building NioReview from the ground up: an AI operations assistant that helps boutique hotels turn guest reviews into operational work. In progress.",
+      highlights: ["Review sync from Booking.com, Google, TripAdvisor and Airbnb", "LLM review extraction, KPI scores and AI reply drafts", "Housekeeping module with Telegram bot and Mini App"],
+      stack: ["Next.js (PPR, Cache Components)", "Supabase", "Vercel", "TypeScript", "OpenAI", "Stripe", "Telegram Bot API", "Tailwind CSS", "shadcn/ui"],
+      details: {
+        overview: "Co-founder, building NioReview from the ground up: an AI operations assistant for boutique hotels. It gathers a property's guest reviews from every channel it is listed on, works out what guests are actually saying, and turns recurring complaints into operational work for the team.\n\nManagers get one place to follow their reputation, reply to reviews, coordinate housekeeping and track maintenance, instead of juggling extranets, spreadsheets and group chats.",
+        responsibilities: [
+          "Review sync: fetching reviews from Booking.com, Google, TripAdvisor and Airbnb with a background sweep that picks up new reviews and catches up on each channel's older history.",
+          "LLM review extraction: every review is read into structured issues with severity, responsible department and per-aspect signals, which feed everything else in the product.",
+          "KPI scores for value for money, sleep quality, food, cleanliness and staff, plus a \"What is impacting your score\" view that ranks which aspects move the overall rating the most.",
+          "AI suggestions on an Action Board: recurring complaints become suggested tasks backed by guest evidence, with owners, target dates and recurrence detection when a fixed issue comes back.",
+          "AI review replies: drafts written in the hotel's own voice and reply style, for staff to edit and post.",
+          "Housekeeping module: a live room board for reception and housekeeping, cleaning time tracking, issue reporting with photos, history and reports, kept in sync with the hotel's PMS.",
+          "Telegram bot integration: housekeeping notices in the team's group chat and a Telegram Mini App where staff open a room, update its status and report problems from their phone.",
+          "Guest surveys, multi-property organizations with roles, and Stripe subscriptions with per-plan entitlements.",
+        ],
+      },
+    },
+    {
       id: "blocksquare", company: "Blocksquare", role: "Senior Web3 Engineer",
       period: "2024 — 2026", location: "Ljubljana · Remote",
       summary: "Blocksquare is an award-winning team developing the world’s leading blockchain-based real estate tokenization system.",
@@ -255,26 +295,6 @@ export const PORTFOLIO = {
           "Grew into the team's smart contract engineer, relied on for the on-chain side of Oceanpoint, Blocksquare's DeFi platform for tokenised real estate",
           "Contracts written with security in mind, with every security fix covered by tests",
           "Most of the code remains in use today and others have built on it",
-        ],
-      },
-    },
-    {
-      id: "makoreactor", company: "Makoreactor", role: "Web3 Developer · Self-employed",
-      period: "2022 — Present", location: "Ljubljana",
-      summary: "Freelancing across different projects — helping teams ship features, build dApps, and move faster with hands-on Web3 engineering.",
-      highlights: ["DeFi protocol features end-to-end", "Smart-contract audits & development", "Helping teams ship faster"],
-      stack: ["React", "Vite", "Next.js", "Envio", "Solidity", "Foundry", "Alchemy"],
-      details: {
-        overview: "Running Makoreactor as my independent freelance practice — taking on focused engagements with crypto teams and helping them ship features end-to-end. Bringing experience across the full stack to move fast without handoffs.",
-        responsibilities: [
-          "HyperLend — shipped several protocol features including repay with collateral (ParaSwap), cross-chain bridge integration, analytics page with Ponder indexer, and yield-bearing limit orders with an Express.js keeper bot and Envio indexer.",
-          "WSG NFT Marketplace — built the full marketplace for Wall Street Games end-to-end: frontend, Solidity contracts, The Graph subgraph, and Orbis decentralised user profiles.",
-          "OTC Marketplace — built a peer-to-peer token swap marketplace from scratch: frontend, smart contracts, and The Graph indexing. Secured a grant from The Graph team in Istanbul.",
-          "MetaCourt DAO — performed a smart contract audit, reviewing contract logic, access controls, and potential vulnerabilities before deployment.",
-        ],
-        impact: [
-          "Broad experience across DeFi, NFT, and DAO projects enables fast onboarding and delivery on new engagements",
-          "End-to-end ownership across frontend, contracts, and indexing means teams avoid slow handoffs and ship faster",
         ],
       },
     },
