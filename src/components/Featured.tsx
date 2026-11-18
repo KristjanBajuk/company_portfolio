@@ -51,7 +51,7 @@ function FeaturedPanel({
           <div className="panel-meta">
             <span className="gold">{data.role}</span>
             <span>· {data.year}</span>
-            {data.status && <span className="proj-status"><i />{data.status}</span>}
+            {data.status && <span className={`proj-status ${data.statusTone || ""}`}><i />{data.status}</span>}
           </div>
 
           {det.overview && (
@@ -143,11 +143,13 @@ export default function Featured() {
                 {f.url && !f.details && <span className="arrow-icon">↗</span>}
                 {f.details && <span className="arrow-icon">→</span>}
                 <div className="meta">
-                  <span className="t">{f.title}</span>
-                  <span className="r mono">
+                  <span className="l">
+                    <span className="t">{f.title}</span>
                     {f.status && (
-                      <span className="proj-status"><i />{f.status}</span>
+                      <span className={`proj-status mono ${f.statusTone || ""}`}><i />{f.status}</span>
                     )}
+                  </span>
+                  <span className="r mono">
                     <span>{f.role}</span>
                     <span>{f.year}</span>
                   </span>

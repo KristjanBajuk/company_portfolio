@@ -21,6 +21,7 @@ export interface FeaturedProject {
   img: string;
   imgBg?: string;
   status?: string;
+  statusTone?: "muted";
   details?: FeaturedProjectDetails;
 }
 
@@ -172,7 +173,7 @@ export const PORTFOLIO = {
       },
     },
     {
-      id: "qvrse", title: "Qvrse.io", role: "Development", year: "2022", tag: "NFTs", url: "https://qvrse.io/", img: "/imgs/portfolio11.png",
+      id: "qvrse", title: "Qvrse.io", role: "Development", year: "2022", status: "Not maintained", statusTone: "muted", tag: "NFTs", url: "https://qvrse.io/", img: "/imgs/portfolio11.png",
       details: {
         overview: "Building a platform for creators to leverage NFTs. Responsible for smart contracts and frontend — built the frontend from the ground up and implemented smart wallets with Alchemy.",
         responsibilities: [
@@ -184,7 +185,7 @@ export const PORTFOLIO = {
       },
     },
     {
-      id: "wsg", title: "WSG NFT Marketplace", role: "Development", year: "2024", tag: "Marketplace", img: "/imgs/portfolio12.png",
+      id: "wsg", title: "WSG NFT Marketplace", role: "Development", year: "2024", status: "Not maintained", statusTone: "muted", tag: "Marketplace", img: "/imgs/portfolio12.png",
       details: {
         overview: "Hired to build the NFT marketplace for Wall Street Games — a crypto game where players earn and collect cards as NFTs. Responsible for the entire marketplace where players could trade their cards.",
         responsibilities: [
@@ -201,7 +202,7 @@ export const PORTFOLIO = {
       },
     },
     {
-      id: "otc", title: "OTC Marketplace", role: "Development", year: "2023", tag: "Marketplace", img: "/imgs/portfolio9.png",
+      id: "otc", title: "OTC Marketplace", role: "Development", year: "2023", status: "Not maintained", statusTone: "muted", tag: "Marketplace", img: "/imgs/portfolio9.png",
       details: {
         overview: "Hired to build an OTC marketplace where users could swap tokens directly peer-to-peer — listing tokens and fulfilling orders without an intermediary. Built the entire application from the ground up.",
         responsibilities: [
