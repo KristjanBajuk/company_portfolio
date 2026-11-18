@@ -121,8 +121,8 @@ export default function Featured() {
         <SectionHead
           label="§ 01 · Selected Work"
           kicker="Featured / 2022–26"
-          title="Shipped products, live on-chain."
-          blurb="Selected dApps, marketplaces and community work from the last few years across Ethereum, Hyperliquid, Polygon and L2s."
+          title="Work I'm proud of."
+          blurb="Selected dApps, marketplaces, AI products and community work from the last few years across Ethereum, Hyperliquid, Polygon and L2s."
         />
         <div className="featured-grid">
           {D.featured.map((f, i) => {
