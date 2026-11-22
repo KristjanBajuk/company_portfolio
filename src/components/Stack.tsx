@@ -9,7 +9,7 @@ export default function Stack() {
     <section className="section" id="stack">
       <div className="shell">
         <SectionHead
-          label="§ 07 · Toolkit"
+          label="§ 08 · Toolkit"
           kicker="Daily drivers"
           title="What I reach for."
           blurb="Stack I lean on across smart-contract and product work. Pragmatic over fashionable."

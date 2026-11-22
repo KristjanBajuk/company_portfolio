@@ -7,6 +7,7 @@ import Motivation from "@/components/Motivation";
 import EthSlovenia from "@/components/EthSlovenia";
 import Conferences from "@/components/Conferences";
 import Podcast from "@/components/Podcast";
+import Whitepaper from "@/components/Whitepaper";
 import Stack from "@/components/Stack";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <EthSlovenia />
         <Conferences />
         <Podcast />
+        <Whitepaper />
         <Stack />
         <CTA />
       </main>
